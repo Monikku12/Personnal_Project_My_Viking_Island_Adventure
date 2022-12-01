@@ -11,9 +11,9 @@ import BlacksmithEn from "./src/components/english/blacksmith_en";
 import FarmEn from "./src/components/english/farm_en";
 import GreatHallEn from "./src/components/english/great_hall_en";
 import NecklaceTableEn from "./src/components/english/necklace_table_en";
+import NotebookEn from "./src/components/english/notebook_en";
 import OptionsEn from "./src/components/english/options_en";
 import QuestListEn from "./src/components/english/quest_list_en";
-import ReferenceBookEn from "./src/components/english/reference_book_en";
 import VillageEn from "./src/components/english/village_en";
 
 // import BagFr from "./src/components/french/bag_fr";
@@ -22,9 +22,9 @@ import VillageEn from "./src/components/english/village_en";
 // import FarmFr from "./src/components/french/farm_fr";
 // import GreatHallFr from "./src/components/french/great_hall_fr";
 // import NecklaceTableFr from "./src/components/french/necklace_table_fr";
+// import NotebookFr from "./src/components/french/notebook_fr";
 // import OptionsFr from "./src/components/french/options_fr";
 // import QuestListFr from "./src/components/french/quest_list_fr";
-// import ReferenceBookFr from "./src/components/french/reference_book_fr";
 // import VillageFr from "./src/components/french/village_fr";
 
 const Stack = createNativeStackNavigator();
@@ -46,8 +46,8 @@ function App() {
                 <Stack.Screen name="OptionsEn" component={OptionsEn} />
                 <Stack.Screen name="QuestListEn" component={QuestListEn} />
                 <Stack.Screen
-                    name="ReferenceBookEn"
-                    component={ReferenceBookEn}
+                    name="NotebookEn"
+                    component={NotebookEn}
                 />
                 <Stack.Screen name="VillageEn" component={VillageEn} />
             </Stack.Navigator>
