@@ -2,6 +2,7 @@ import React from "react";
 // import { NativeBaseProvider, Box } from "native-base";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Provider as PaperProvider } from "react-native-paper";
 
 import Title from "./src/components/title";
 
@@ -34,22 +35,24 @@ function App() {
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="Title" component={Title} />
-                <Stack.Screen name="BagEn" component={BagEn} />
-                <Stack.Screen name="BedroomEn" component={BedroomEn} />
-                <Stack.Screen name="BlacksmithEn" component={BlacksmithEn} />
-                <Stack.Screen name="FarmEn" component={FarmEn} />
-                <Stack.Screen name="GreatHallEn" component={GreatHallEn} />
-                <Stack.Screen
-                    name="NecklaceTableEn"
-                    component={NecklaceTableEn}
-                />
-                <Stack.Screen name="OptionsEn" component={OptionsEn} />
-                <Stack.Screen name="QuestListEn" component={QuestListEn} />
-                <Stack.Screen
-                    name="NotebookEn"
-                    component={NotebookEn}
-                />
-                <Stack.Screen name="VillageEn" component={VillageEn} />
+                <PaperProvider>
+                    <Stack.Screen name="BagEn" component={BagEn} />
+                    <Stack.Screen name="BedroomEn" component={BedroomEn} />
+                    <Stack.Screen
+                        name="BlacksmithEn"
+                        component={BlacksmithEn}
+                    />
+                    <Stack.Screen name="FarmEn" component={FarmEn} />
+                    <Stack.Screen name="GreatHallEn" component={GreatHallEn} />
+                    <Stack.Screen
+                        name="NecklaceTableEn"
+                        component={NecklaceTableEn}
+                    />
+                    <Stack.Screen name="OptionsEn" component={OptionsEn} />
+                    <Stack.Screen name="QuestListEn" component={QuestListEn} />
+                    <Stack.Screen name="NotebookEn" component={NotebookEn} />
+                    <Stack.Screen name="VillageEn" component={VillageEn} />
+                </PaperProvider>
             </Stack.Navigator>
         </NavigationContainer>
     );
