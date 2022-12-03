@@ -1,4 +1,5 @@
 import * as React from "react";
+import { StyleSheet } from "react-native";
 import { FAB, Portal, Provider } from "react-native-paper";
 
 const ItemsMenu = () => {
@@ -9,21 +10,27 @@ const ItemsMenu = () => {
     const { open } = state;
 
     return (
-        <Provider>
+        // <Provider>
             <Portal>
                 <FAB.Group
                     open={open}
                     visible
+                    placement="bottom-left"
                     icon={open ? "window-close" : "bag-personal"}
-                    style={[
-                        {
-                        backgroundColor: "green",
-                        }
-                    ]}
+                    style={styles.fab}
+                    // style={[
+                    //     {
+                    //         backgroundColor: "green",
+                    //         position: "absolute",
+                    //         bottom: 15,
+                    //         right: 15,
+                    //     },
+                    // ]}
                     actions={[
                         {
-                            icon: "bag-personal",
-                            onPress: () => console.log("Pressed add"),
+                            icon: "cog-outline",
+                            label: "Options",
+                            onPress: () => console.log("Pressed notifications"),
                         },
                         {
                             icon: "script-text-outline",
@@ -36,9 +43,9 @@ const ItemsMenu = () => {
                             onPress: () => console.log("Pressed email"),
                         },
                         {
-                            icon: "cog-outline",
-                            label: "Options",
-                            onPress: () => console.log("Pressed notifications"),
+                            icon: "bag-personal",
+                            label: "Items",
+                            onPress: () => console.log("Pressed add"),
                         },
                     ]}
                     onStateChange={onStateChange}
@@ -49,8 +56,18 @@ const ItemsMenu = () => {
                     }}
                 />
             </Portal>
-        </Provider>
+        /* </Provider> */
     );
 };
+
+const styles = StyleSheet.create({
+    fab: {
+        // backgroundColor: "green",
+        position: "absolute",
+        margin: 0,
+        right: 15,
+        bottom: 15,
+    },
+});
 
 export default ItemsMenu;

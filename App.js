@@ -2,7 +2,7 @@ import React from "react";
 // import { NativeBaseProvider, Box } from "native-base";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as PaperProvider} from "react-native-paper";
 
 import Title from "./src/components/title";
 
@@ -16,6 +16,8 @@ import NotebookEn from "./src/components/english/notebook_en";
 import OptionsEn from "./src/components/english/options_en";
 import QuestListEn from "./src/components/english/quest_list_en";
 import VillageEn from "./src/components/english/village_en";
+
+import ItemsMenu from "./src/components/english/items_menu_en";
 
 // import BagFr from "./src/components/french/bag_fr";
 // import BedroomFr from "./src/components/french/bedroom_fr";
@@ -32,10 +34,11 @@ const Stack = createNativeStackNavigator();
 
 function App() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Title" component={Title} />
-                <PaperProvider>
+        <PaperProvider FAB={ItemsMenu}>
+                <ItemsMenu />
+            <NavigationContainer>
+                <Stack.Navigator screenOptions={{ headerShown: false }}>
+                    <Stack.Screen name="Title" component={Title} />
                     <Stack.Screen name="BagEn" component={BagEn} />
                     <Stack.Screen name="BedroomEn" component={BedroomEn} />
                     <Stack.Screen
@@ -52,9 +55,9 @@ function App() {
                     <Stack.Screen name="QuestListEn" component={QuestListEn} />
                     <Stack.Screen name="NotebookEn" component={NotebookEn} />
                     <Stack.Screen name="VillageEn" component={VillageEn} />
-                </PaperProvider>
-            </Stack.Navigator>
-        </NavigationContainer>
+                </Stack.Navigator>
+            </NavigationContainer>
+        </PaperProvider>
     );
 }
 
