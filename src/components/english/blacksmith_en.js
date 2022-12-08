@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Button, View, Text } from "react-native";
 
+import ItemsMenu from "./items_menu_en";
+
 function BlacksmithEn({ navigation }) {
     return (
         <View
@@ -11,6 +13,7 @@ function BlacksmithEn({ navigation }) {
                 title="Exit"
                 onPress={() => navigation.navigate("VillageEn")}
             />
+            <ItemsMenu />
         </View>
     );
 }

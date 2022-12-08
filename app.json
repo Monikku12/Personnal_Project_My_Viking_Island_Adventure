@@ -3,7 +3,7 @@
     "name": "my_viking_island_adventure",
     "slug": "my_viking_island_adventure",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {

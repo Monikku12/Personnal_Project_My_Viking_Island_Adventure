@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, View, Text } from "react-native";
 
-// import ItemsMenu from "./src/components/english/items_menu_en";
+import ItemsMenu from "./items_menu_en";
 
 function BedroomEn({ navigation }) {
     return (
@@ -13,6 +13,7 @@ function BedroomEn({ navigation }) {
                 title="Exit"
                 onPress={() => navigation.navigate("VillageEn")}
             />
+            <ItemsMenu />
         </View>
     );
 }

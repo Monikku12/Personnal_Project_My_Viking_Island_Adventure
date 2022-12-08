@@ -34,8 +34,7 @@ const Stack = createNativeStackNavigator();
 
 function App() {
     return (
-        <PaperProvider FAB={ItemsMenu}>
-                <ItemsMenu />
+        <PaperProvider>
             <NavigationContainer>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen name="Title" component={Title} />
