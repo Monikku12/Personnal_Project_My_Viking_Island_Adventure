@@ -3,9 +3,9 @@ import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
 
 import ItemsMenu from "./items_menu_en";
 
-const backgroundImage = require("../../images/background/bedroom_background.jpg");
+const backgroundImage = require("../../images/background/longhouse_inside_background.jpg");
 
-function BedroomEn({ navigation }) {
+function LonghouseEn({ navigation }) {
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
@@ -14,7 +14,7 @@ function BedroomEn({ navigation }) {
                 source={backgroundImage}
                 style={styles.imageBackground}
             >
-                <Text style={styles.text}>This is the Bedroom</Text>
+                <Text style={styles.text}>Necklace_Table Screen</Text>
                 <Button
                     title="Exit"
                     onPress={() => navigation.navigate("VillageEn")}
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default BedroomEn;
+export default LonghouseEn;

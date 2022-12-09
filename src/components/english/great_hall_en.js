@@ -1,20 +1,24 @@
 import * as React from "react";
-import { Button, View, Text } from "react-native";
+import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
 
 import ItemsMenu from "./items_menu_en";
 
+const backgroundImage = require("../../images/background/great_hall_background.jpg");
+
 function GreatHallEn({ navigation }) {
     return (
-        <View
-            style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-            <ImageBackground source={image} resizeMode="cover" style={styles.image}></ImageBackground>
-            <Text>Great_Hall Screen</Text>
-            <Button
-                title="Exit"
-                onPress={() => navigation.navigate("VillageEn")}
-            />
-            <ItemsMenu />
+        <View style={styles.container}>
+            <ImageBackground
+                source={backgroundImage}
+                style={styles.imageBackground}
+            >
+                <Text style={styles.text}>Great Hall Screen</Text>
+                <Button
+                    title="Exit"
+                    onPress={() => navigation.navigate("VillageEn")}
+                />
+                <ItemsMenu />
+            </ImageBackground>
         </View>
     );
 }
@@ -22,18 +26,23 @@ function GreatHallEn({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    image: {
-        flex: 1,
+        alignItems: "center",
         justifyContent: "center",
     },
+    imageBackground: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
+        width: "100%",
+        height: "100%",
+    },
     text: {
-        color: "white",
-        fontSize: 42,
-        lineHeight: 84,
+        color: "black",
+        fontSize: 12,
+        lineHeight: 15,
         fontWeight: "bold",
         textAlign: "center",
-        backgroundColor: "#000000c0",
+        backgroundColor: "white",
     },
 });
 
