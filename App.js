@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Provider as PaperProvider} from "react-native-paper";
-
+import { StatusBar } from "react-native";
 import Title from "./src/components/title";
 
 import BagEn from "./src/components/english/bag_en";
@@ -32,6 +32,9 @@ const Stack = createNativeStackNavigator();
 function App() {
     return (
         <PaperProvider>
+            <StatusBar
+                hidden={true}
+            />
             <NavigationContainer>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen name="Title" component={Title} />
