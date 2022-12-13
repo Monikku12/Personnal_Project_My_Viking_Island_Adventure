@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
 
-import ItemsMenu from "./items_menu_en";
+import ItemsMenu from "../items_menu_en";
 
 const backgroundImage = require("../../images/background/village_background.jpg");
 

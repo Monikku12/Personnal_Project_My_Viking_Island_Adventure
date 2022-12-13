@@ -2,7 +2,8 @@ import * as React from "react";
 import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 
-import ItemsMenu from "./items_menu_en";
+import ItemsMenu from "../items_menu_en";
+import ExitButton from "../exit_button";
 
 const backgroundImage = require("../../images/background/longhouse_inside_background.jpg");
 
@@ -21,6 +22,7 @@ function LonghouseEn({ navigation }) {
                     onPress={() => navigation.navigate("VillageEn")}
                 />
                 <ItemsMenu />
+                <ExitButton />
             </ImageBackground>
         </View>
     );
