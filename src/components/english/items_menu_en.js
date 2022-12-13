@@ -15,28 +15,28 @@ const ItemsMenu = () => {
         <Portal>
             <FAB.Group
                 open={open}
-                placement="left"
+                // placement="left"
                 icon={open ? "window-close" : "bag-personal"}
                 style={styles.fab}
                 actions={[
                     {
                         icon: "cog-outline",
-                        label: "Options",
+                        // label: "Options",
                         onPress: () => console.log("Pressed notifications"),
                     },
                     {
                         icon: "script-text-outline",
-                        label: "Quest",
+                        // label: "Quest",
                         onPress: () => console.log("Pressed star"),
                     },
                     {
                         icon: "book-open-page-variant-outline",
-                        label: "Notebook",
+                        // label: "Notebook",
                         onPress: () => console.log("Pressed email"),
                     },
                     {
                         icon: "bag-personal",
-                        label: "Items",
+                        // label: "Items",
                         onPress: () => console.log("Pressed add"),
                     },
                 ]}
@@ -53,7 +53,10 @@ const ItemsMenu = () => {
 
 const styles = StyleSheet.create({
     fab: {
-        position: "absolute",
+        flex: 1,
+        justifyContent: "flex-end",
+        alignItems: "flex-start",
+        // position: "absolute",
         margin: 0,
         left: 15,
         bottom: 15,

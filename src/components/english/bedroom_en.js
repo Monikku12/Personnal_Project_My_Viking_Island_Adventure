@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
+import { Button } from "react-native-paper";
 
 import ItemsMenu from "./items_menu_en";
 
@@ -15,6 +16,14 @@ function BedroomEn({ navigation }) {
                 style={styles.imageBackground}
             >
                 <Text style={styles.text}>This is the Bedroom</Text>
+                <View style={styles.buttonView}>
+                    <Button
+                        style={styles.button}
+                        icon="door-open"
+                        mode="contained"
+                        onPress={() => navigation.navigate("VillageEn")}
+                    />
+                </View>
                 <Button
                     title="Exit"
                     onPress={() => navigation.navigate("VillageEn")}
@@ -45,6 +54,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         backgroundColor: "white",
+    },
+    buttonView: {
+        textColor: "white",
+        buttonColor: "black",
+        justifyContent: "center",
+        alignItems: "center",
     },
 });
 

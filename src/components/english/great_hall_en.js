@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
+import { Button } from "react-native-paper";
 
 import ItemsMenu from "./items_menu_en";
 
