@@ -1,14 +1,17 @@
 import * as React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import { FAB, Portal } from "react-native-paper";
 
-const ExitButton = () => {
+function ExitButton({ VillageEn }) {
+    const navigation = useNavigation();
+
     return (
         <Portal>
             <FAB
                 style={styles.fab}
                 icon="door-open"
-                onPress={() => navigation.goBack()}
+                onPress={() => navigation.navigate("VillageEn")}
             />
         </Portal>
     );

@@ -6,7 +6,7 @@ import ExitButton from "../exit_button";
 
 const backgroundImage = require("../../images/background/bedroom_background.jpg");
 
-function BedroomEn({ navigation }) {
+function BedroomEn( ) {
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}

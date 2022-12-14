@@ -4,6 +4,8 @@ import { StyleSheet } from "react-native";
 // import { useIsFocused } from "@react-navigation/native";
 import { FAB, Portal } from "react-native-paper";
 
+import QuestListEn from "./english/quest_list_en";
+
 const ItemsMenu = () => {
     const [state, setState] = React.useState({ open: false });
 
@@ -27,7 +29,7 @@ const ItemsMenu = () => {
                     {
                         icon: "script-text-outline",
                         // label: "Quest",
-                        onPress: () => console.log("Pressed star"),
+                        onPress: (QuestListEn) => QuestListEn.setVisible(true),
                     },
                     {
                         icon: "book-open-page-variant-outline",
@@ -56,10 +58,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "flex-end",
         alignItems: "flex-start",
-        // position: "absolute",
+        position: "absolute",
         margin: 0,
-        left: 15,
-        bottom: 15,
+        // left: 15,
+        // bottom: 15,
+        backdropOpacity: 0,
     },
 });
 
