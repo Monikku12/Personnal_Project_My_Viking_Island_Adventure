@@ -16,7 +16,17 @@ function LonghouseEn({ navigation }) {
                 source={backgroundImage}
                 style={styles.imageBackground}
             >
-                <Text style={styles.text}>Necklace_Table Screen</Text>
+                <Text style={styles.text}>LonghouseEn Screen</Text>
+                <Button
+                    style={styles.button}
+                    children="BedroomEn"
+                    mode="outlined"
+                    width="30%"
+                    height="30%"
+                    left="-38%"
+                    bottom="25%"
+                    onPress={() => navigation.navigate("BedroomEn")}
+                />
                 <Button
                     title="Exit"
                     onPress={() => navigation.navigate("VillageEn")}

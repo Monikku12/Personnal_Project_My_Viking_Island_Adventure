@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Button, View, Text, ImageBackground, StyleSheet } from "react-native";
+import { View, Text, ImageBackground, StyleSheet } from "react-native";
+import { Button } from "react-native-paper";
 
 import ItemsMenu from "../items_menu_en";
 
@@ -14,27 +15,54 @@ function VillageEn({ navigation }) {
                 source={backgroundImage}
                 style={styles.imageBackground}
             >
-                <Text style={styles.text}>Village Screen</Text>
-                <Button
-                    title="BlacksmithEn"
-                    onPress={() => navigation.navigate("BlacksmithEn")}
-                />
-                <Button
-                    title="FarmEn"
-                    onPress={() => navigation.navigate("FarmEn")}
-                />
-                <Button
-                    title="GreatHallEn"
-                    onPress={() => navigation.navigate("GreatHallEn")}
-                />
-                <Button
-                    title="LonghouseEn"
-                    onPress={() => navigation.navigate("LonghouseEn")}
-                />
-                <Button
-                    title="BedroomEn"
-                    onPress={() => navigation.navigate("BedroomEn")}
-                />
+                <View style={styles.content}>
+                    <View style={styles.textView}>
+                        <Text style={styles.text}>Village Screen</Text>
+                    </View>
+                    <View style={styles.buttonView}>
+                        {/* TODO: Change colors of buttonView to make it invisible once true background is setup. */}
+                        <Button
+                            style={contentStyle.button}
+                            children="BlacksmithEn"
+                            mode="outlined"
+                            width="25%"
+                            height="30%"
+                            left="-36%"
+                            bottom="25%"
+                            onPress={() => navigation.navigate("BlacksmithEn")}
+                        />
+                        <Button
+                            style={contentStyle.button}
+                            children="FarmEn"
+                            mode="outlined"
+                            width="13%"
+                            height="25%"
+                            left="-11%"
+                            bottom="28%"
+                            onPress={() => navigation.navigate("FarmEn")}
+                        />
+                        <Button
+                            style={contentStyle.button}
+                            children="GreatHallEn"
+                            mode="outlined"
+                            width="25%"
+                            height="50%"
+                            left="2%"
+                            bottom="27%"
+                            onPress={() => navigation.navigate("GreatHallEn")}
+                        />
+                        <Button
+                            style={contentStyle.button}
+                            children="LonghouseEn"
+                            mode="outlined"
+                            width="13%"
+                            height="33%"
+                            left="-50%"
+                            bottom="23%"
+                            onPress={() => navigation.navigate("LonghouseEn")}
+                        />
+                    </View>
+                </View>
                 <ItemsMenu />
             </ImageBackground>
         </View>
@@ -54,6 +82,17 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
+    content: {
+        flex: 1,
+        // flexDirection: "row",
+        JustifyContent: "center",
+        alignItems: "center",
+    },
+    textView: {
+        flex: 0,
+        padding: 15,
+        justifyContent: "center",
+    },
     text: {
         color: "black",
         fontSize: 12,
@@ -62,6 +101,25 @@ const styles = StyleSheet.create({
         textAlign: "center",
         backgroundColor: "white",
     },
+    buttonView: {
+        flex: 1,
+        textColor: "white",
+        buttonColor: "black",
+        justifyContent: "center",
+        alignItems: "center",
+    },
 });
 
+const contentStyle = StyleSheet.create({
+    button: {
+        // zIndex: 999,
+        flex: 1,
+        textColor: "white",
+        buttonColor: "black",
+        position: "absolute",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+});
+    
 export default VillageEn;

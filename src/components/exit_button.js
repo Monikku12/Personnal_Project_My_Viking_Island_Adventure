@@ -1,21 +1,19 @@
 import * as React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
-import { FAB, Portal } from "react-native-paper";
+import { FAB } from "react-native-paper";
 
-function ExitButton({ VillageEn }) {
+function ExitButton( ) {
     const navigation = useNavigation();
 
     return (
-        <Portal>
-            <FAB
-                style={styles.fab}
-                icon="door-open"
-                onPress={() => navigation.navigate("VillageEn")}
-            />
-        </Portal>
+        <FAB
+            style={styles.fab}
+            icon="door-open"
+            onPress={() => navigation.navigate("VillageEn")}
+        />
     );
-};
+}
 
 const styles = StyleSheet.create({
     fab: {
