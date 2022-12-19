@@ -20,11 +20,11 @@ function VillageEn({ navigation }) {
                         <Text style={styles.text}>Village Screen</Text>
                     </View>
                     <View style={styles.buttonView}>
-                        {/* TODO: Change colors of buttonView to make it invisible once true background is setup. */}
                         <Button
-                            style={contentStyle.button}
+                            style={styles.button}
+                            contentStyle={styles.contentStyle}
+                            labelStyle={styles.labelStyle}
                             children="BlacksmithEn"
-                            mode="outlined"
                             width="25%"
                             height="30%"
                             left="-36%"
@@ -32,9 +32,10 @@ function VillageEn({ navigation }) {
                             onPress={() => navigation.navigate("BlacksmithEn")}
                         />
                         <Button
-                            style={contentStyle.button}
+                            style={styles.button}
+                            contentStyle={styles.contentStyle}
+                            labelStyle={styles.labelStyle}
                             children="FarmEn"
-                            mode="outlined"
                             width="13%"
                             height="25%"
                             left="-11%"
@@ -42,9 +43,10 @@ function VillageEn({ navigation }) {
                             onPress={() => navigation.navigate("FarmEn")}
                         />
                         <Button
-                            style={contentStyle.button}
+                            style={styles.button}
+                            contentStyle={styles.contentStyle}
+                            labelStyle={styles.labelStyle}
                             children="GreatHallEn"
-                            mode="outlined"
                             width="25%"
                             height="50%"
                             left="2%"
@@ -52,13 +54,14 @@ function VillageEn({ navigation }) {
                             onPress={() => navigation.navigate("GreatHallEn")}
                         />
                         <Button
-                            style={contentStyle.button}
+                            style={styles.button}
+                            contentStyle={styles.contentStyle}
+                            labelStyle={styles.labelStyle}
                             children="LonghouseEn"
-                            mode="outlined"
                             width="13%"
                             height="33%"
                             left="-50%"
-                            bottom="23%"
+                            bottom="25%"
                             onPress={() => navigation.navigate("LonghouseEn")}
                         />
                     </View>
@@ -84,7 +87,6 @@ const styles = StyleSheet.create({
     },
     content: {
         flex: 1,
-        // flexDirection: "row",
         JustifyContent: "center",
         alignItems: "center",
     },
@@ -108,17 +110,21 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
-});
-
-const contentStyle = StyleSheet.create({
     button: {
-        // zIndex: 999,
         flex: 1,
-        textColor: "white",
-        buttonColor: "black",
         position: "absolute",
+        mode: "contained",
         justifyContent: "center",
-        alignItems: "center",
+    },
+    contentStyle: {
+        // TODO: Change color of buttonView to make it visible/invisible (color=transparent) to set true background.
+        buttonColor: "transparent",
+        height: "100%",
+    },
+    labelStyle: {
+        color: "red",
+        fontSize: 12,
+        opacity: 0,
     },
 });
     
