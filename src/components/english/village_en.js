@@ -23,7 +23,7 @@ function VillageEn({ navigation }) {
                             width="25%"
                             height="30%"
                             left="-36%"
-                            bottom="25%"
+                            bottom="15%"
                             onPress={() => navigation.navigate("BlacksmithEn")}
                         />
                         <Button
@@ -34,7 +34,7 @@ function VillageEn({ navigation }) {
                             width="13%"
                             height="25%"
                             left="-11%"
-                            bottom="28%"
+                            bottom="18%"
                             onPress={() => navigation.navigate("FarmEn")}
                         />
                         <Button
@@ -45,7 +45,7 @@ function VillageEn({ navigation }) {
                             width="25%"
                             height="50%"
                             left="2%"
-                            bottom="27%"
+                            bottom="17%"
                             onPress={() => navigation.navigate("GreatHallEn")}
                         />
                         <Button
@@ -56,8 +56,20 @@ function VillageEn({ navigation }) {
                             width="13%"
                             height="33%"
                             left="-50%"
-                            bottom="25%"
+                            bottom="15%"
                             onPress={() => navigation.navigate("LonghouseEn")}
+                        />
+                        <Button
+                            style={styles.button}
+                            contentStyle={styles.contentStyle}
+                            labelStyle={styles.labelStyle}
+                            children="Gohdi"
+                            width="25%"
+                            height="63%"
+                            left="25%"
+                            bottom="15%"
+                            // TODO: Make Gohdi appears when his house is clicked.
+                            onPress={() => console.log("Gohdi Appears!!")}
                         />
                     </View>
                     <View style={styles.textView}>
