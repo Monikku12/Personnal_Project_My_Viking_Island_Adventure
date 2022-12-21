@@ -20,6 +20,7 @@ const ItemsMenu = () => {
                 // placement="left"
                 icon={open ? "window-close" : "bag-personal"}
                 style={styles.fab}
+                backdropColor="transparent"
                 actions={[
                     {
                         icon: "cog-outline",
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
         margin: 0,
         // left: 15,
         // bottom: 15,
-        backdropOpacity: 0,
+        backdropColor: "transparent",
     },
 });
 
