@@ -3,6 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Provider as PaperProvider} from "react-native-paper";
 import { StatusBar } from "react-native";
+import { useFonts } from "expo-font";
+
 import Title from "./src/components/title";
 
 import BagEn from "./src/components/english/bag_en";
@@ -30,7 +32,16 @@ import VillageEn from "./src/components/english/village_en";
 const Stack = createNativeStackNavigator();
 
 function App() {
-    return (
+    
+    const [loaded] = useFonts({
+        viking_medium: require("./assets/fonts/viking_medium.ttf"),
+    });
+
+    if (!loaded) {
+        return null;
+    }
+
+return (
         <PaperProvider>
             <StatusBar
                 hidden={true}

@@ -8,17 +8,12 @@ const backgroundImage = require("../../images/background/village_background.jpg"
 
 function VillageEn({ navigation }) {
     return (
-        <View
-            style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
+        <View style={styles.container}>
             <ImageBackground
                 source={backgroundImage}
                 style={styles.imageBackground}
             >
                 <View style={styles.content}>
-                    <View style={styles.textView}>
-                        <Text style={styles.text}>Village Screen</Text>
-                    </View>
                     <View style={styles.buttonView}>
                         <Button
                             style={styles.button}
@@ -65,6 +60,9 @@ function VillageEn({ navigation }) {
                             onPress={() => navigation.navigate("LonghouseEn")}
                         />
                     </View>
+                    <View style={styles.textView}>
+                        <Text style={styles.text}>Village Screen</Text>
+                    </View>
                 </View>
                 <ItemsMenu />
             </ImageBackground>
@@ -105,8 +103,6 @@ const styles = StyleSheet.create({
     },
     buttonView: {
         flex: 1,
-        textColor: "white",
-        buttonColor: "black",
         justifyContent: "center",
         alignItems: "center",
     },
