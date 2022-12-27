@@ -2,12 +2,12 @@ import * as React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 
-import ItemsMenu from "../items_menu_en";
+import ItemsMenuFAB from "./items_menu_en_fab.js";
 import ExitButton from "../exit_button";
 
-const backgroundImage = require("../../images/background/farm_background.jpg");
+const backgroundImage = require("../../images/background/longhouse_inside_background.jpg");
 
-function FarmEn({ navigation }) {
+function LonghouseEnScreen({ navigation }) {
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
@@ -16,12 +16,22 @@ function FarmEn({ navigation }) {
                 source={backgroundImage}
                 style={styles.imageBackground}
             >
-                <Text style={styles.text}>Farm Screen</Text>
+                <Text style={styles.text}>LonghouseEn Screen</Text>
+                <Button
+                    style={styles.button}
+                    children="BedroomEn"
+                    mode="outlined"
+                    width="30%"
+                    height="30%"
+                    left="-38%"
+                    bottom="25%"
+                    onPress={() => navigation.navigate("BedroomEnScreen")}
+                />
                 <Button
                     title="Exit"
-                    onPress={() => navigation.navigate("VillageEn")}
+                    onPress={() => navigation.navigate("VillageEnScreen")}
                 />
-                <ItemsMenu />
+                <ItemsMenuFAB />
                 <ExitButton />
             </ImageBackground>
         </View>
@@ -51,4 +61,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default FarmEn;
+export default LonghouseEnScreen;

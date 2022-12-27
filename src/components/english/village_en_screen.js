@@ -2,11 +2,11 @@ import * as React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 
-import ItemsMenu from "../items_menu_en";
+import ItemsMenuFAB from "./items_menu_en_fab.js";
 
 const backgroundImage = require("../../images/background/village_background.jpg");
 
-function VillageEn({ navigation }) {
+function VillageEnScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -19,45 +19,51 @@ function VillageEn({ navigation }) {
                             style={styles.button}
                             contentStyle={styles.contentStyle}
                             labelStyle={styles.labelStyle}
-                            children="BlacksmithEn"
+                            children="BlacksmithEnScreen"
                             width="25%"
                             height="30%"
                             left="-36%"
                             bottom="15%"
-                            onPress={() => navigation.navigate("BlacksmithEn")}
+                            onPress={() =>
+                                navigation.navigate("BlacksmithEnScreen")
+                            }
                         />
                         <Button
                             style={styles.button}
                             contentStyle={styles.contentStyle}
                             labelStyle={styles.labelStyle}
-                            children="FarmEn"
+                            children="FarmEnScreen"
                             width="13%"
                             height="25%"
                             left="-11%"
                             bottom="18%"
-                            onPress={() => navigation.navigate("FarmEn")}
+                            onPress={() => navigation.navigate("FarmEnScreen")}
                         />
                         <Button
                             style={styles.button}
                             contentStyle={styles.contentStyle}
                             labelStyle={styles.labelStyle}
-                            children="GreatHallEn"
+                            children="GreatHallEnScreen"
                             width="25%"
                             height="50%"
                             left="2%"
                             bottom="17%"
-                            onPress={() => navigation.navigate("GreatHallEn")}
+                            onPress={() =>
+                                navigation.navigate("GreatHallEnScreen")
+                            }
                         />
                         <Button
                             style={styles.button}
                             contentStyle={styles.contentStyle}
                             labelStyle={styles.labelStyle}
-                            children="LonghouseEn"
+                            children="LonghouseEnScreen"
                             width="13%"
                             height="33%"
                             left="-50%"
                             bottom="15%"
-                            onPress={() => navigation.navigate("LonghouseEn")}
+                            onPress={() =>
+                                navigation.navigate("LonghouseEnScreen")
+                            }
                         />
                         <Button
                             style={styles.button}
@@ -76,7 +82,7 @@ function VillageEn({ navigation }) {
                         <Text style={styles.text}>Village Screen</Text>
                     </View>
                 </View>
-                <ItemsMenu />
+                <ItemsMenuFAB />
             </ImageBackground>
         </View>
     );
@@ -135,5 +141,5 @@ const styles = StyleSheet.create({
         opacity: 0,
     },
 });
-    
-export default VillageEn;
+
+export default VillageEnScreen;

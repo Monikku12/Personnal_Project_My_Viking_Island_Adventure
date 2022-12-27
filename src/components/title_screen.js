@@ -5,7 +5,7 @@ import { Button } from "react-native-paper";
 const backgroundImage = require("../images/background/title_background.png");
 const logo = require("../images/logo/title_logo.png");
 
-function Title({ navigation }) {
+function TitleScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -23,16 +23,13 @@ function Title({ navigation }) {
                             buttonColor="#C3A964"
                             right="20%"
                             bottom="-5%"
-                            onPress={() => navigation.navigate("BedroomEn")}
+                            onPress={() =>
+                                navigation.navigate("BedroomEnScreen")
+                            }
                         />
                     </View>
                     <View style={styles.imageView}>
-                        <Image
-                            style={styles.logo}
-                            source={logo}
-                            // justifyContent="center"
-                            // alignItems="center"
-                        />
+                        <Image style={styles.logo} source={logo} />
                     </View>
                     <View style={styles.buttonView}>
                         <Button
@@ -44,7 +41,9 @@ function Title({ navigation }) {
                             buttonColor="#C3A964"
                             left="20%"
                             bottom="-5%"
-                            onPress={() => navigation.navigate("BedroomFr")}
+                            onPress={() =>
+                                navigation.navigate("BedroomFrScreen")
+                            }
                         />
                     </View>
                 </View>
@@ -72,19 +71,6 @@ const styles = StyleSheet.create({
         JustifyContent: "center",
         alignItems: "center",
     },
-    // textView: {
-    //     flex: 0,
-    //     padding: 15,
-    //     justifyContent: "center",
-    // },
-    // text: {
-    //     color: "black",
-    //     fontSize: 12,
-    //     lineHeight: 15,
-    //     fontWeight: "bold",
-    //     textAlign: "center",
-    //     backgroundColor: "white",
-    // },
     buttonView: {
         flex: 1,
         justifyContent: "center",
@@ -108,15 +94,13 @@ const styles = StyleSheet.create({
     },
     logo: {
         flex: 1,
-        // flexDirection: "row",
         position: "absolute",
         width: "100%",
         height: "100%",
-        // resizeMethod: "scale",
         resizeMode: "center",
         justifyContent: "center",
         alignItems: "center",
     },
 });
 
-export default Title;
+export default TitleScreen;

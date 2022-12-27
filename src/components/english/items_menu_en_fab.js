@@ -1,23 +1,20 @@
 import * as React from "react";
-// import { useState, useEffect } from "react";
 import { StyleSheet } from "react-native";
-// import { useIsFocused } from "@react-navigation/native";
 import { FAB, Portal } from "react-native-paper";
 
-import QuestListEn from "./english/quest_list_en";
+import QuestListEnModal from "./quest_list_en_modal";
 
-const ItemsMenu = () => {
+const ItemsMenuFAB = () => {
+    // const navigation = useNavigation();
+
     const [state, setState] = React.useState({ open: false });
-
     const onStateChange = ({ open }) => setState({ open });
-
     const { open } = state;
 
     return (
         <Portal>
             <FAB.Group
                 open={open}
-                // placement="left"
                 icon={open ? "window-close" : "bag-personal"}
                 style={styles.fab}
                 backdropColor="transparent"
@@ -25,30 +22,25 @@ const ItemsMenu = () => {
                     {
                         icon: "cog-outline",
                         // label: "Options",
-                        onPress: () => console.log("Pressed notifications"),
+                        onPress: () => console.log("Pressed Options"),
                     },
                     {
                         icon: "script-text-outline",
                         // label: "Quest",
-                        onPress: (QuestListEn) => QuestListEn.setVisible(true),
+                        onPress: () => console.log("Pressed Quest"),
                     },
                     {
                         icon: "book-open-page-variant-outline",
-                        // label: "Notebook",
-                        onPress: () => console.log("Pressed email"),
+                        // label: "Notebook"
+                        onPress: () => console.log("Pressed Notebook"),
                     },
                     {
                         icon: "bag-personal",
                         // label: "Items",
-                        onPress: () => console.log("Pressed add"),
+                        onPress: () => console.log("Pressed Items"),
                     },
                 ]}
                 onStateChange={onStateChange}
-                onPress={() => {
-                    if (open) {
-                        // do something if the speed dial is open
-                    }
-                }}
             />
         </Portal>
     );
@@ -61,10 +53,8 @@ const styles = StyleSheet.create({
         alignItems: "flex-start",
         position: "absolute",
         margin: 0,
-        // left: 15,
-        // bottom: 15,
         backdropColor: "transparent",
     },
 });
 
-export default ItemsMenu;
+export default ItemsMenuFAB;

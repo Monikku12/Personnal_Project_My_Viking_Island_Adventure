@@ -10,7 +10,7 @@ function ExitButton( ) {
         <FAB
             style={styles.fab}
             icon="door-open"
-            onPress={() => navigation.navigate("VillageEn")}
+            onPress={() => navigation.navigate("VillageEnScreen")}
         />
     );
 }

@@ -1,13 +1,12 @@
 import * as React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
-import { Button } from "react-native-paper";
 
-import ItemsMenu from "../items_menu_en";
+import ItemsMenuFAB from "./items_menu_en_fab.js";
 import ExitButton from "../exit_button";
 
-const backgroundImage = require("../../images/background/longhouse_inside_background.jpg");
+const backgroundImage = require("../../images/background/bedroom_background.jpg");
 
-function LonghouseEn({ navigation }) {
+function BedroomEnScreen() {
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
@@ -16,22 +15,8 @@ function LonghouseEn({ navigation }) {
                 source={backgroundImage}
                 style={styles.imageBackground}
             >
-                <Text style={styles.text}>LonghouseEn Screen</Text>
-                <Button
-                    style={styles.button}
-                    children="BedroomEn"
-                    mode="outlined"
-                    width="30%"
-                    height="30%"
-                    left="-38%"
-                    bottom="25%"
-                    onPress={() => navigation.navigate("BedroomEn")}
-                />
-                <Button
-                    title="Exit"
-                    onPress={() => navigation.navigate("VillageEn")}
-                />
-                <ItemsMenu />
+                <Text style={styles.text}>This is the Bedroom</Text>
+                <ItemsMenuFAB />
                 <ExitButton />
             </ImageBackground>
         </View>
@@ -59,6 +44,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
         backgroundColor: "white",
     },
+    buttonView: {
+        textColor: "white",
+        buttonColor: "black",
+        justifyContent: "center",
+        alignItems: "center",
+    },
 });
 
-export default LonghouseEn;
+export default BedroomEnScreen;

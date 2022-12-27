@@ -2,12 +2,12 @@ import * as React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 
-import ItemsMenu from "../items_menu_en";
+import ItemsMenuFAB from "./items_menu_en_fab.js";
 import ExitButton from "../exit_button";
 
 const backgroundImage = require("../../images/background/blacksmith_background.jpg");
 
-function BlacksmithEn({ navigation }) {
+function BlacksmithEnScreen({ navigation }) {
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
@@ -19,9 +19,9 @@ function BlacksmithEn({ navigation }) {
                 <Text style={styles.text}>Blacksmith Screen</Text>
                 <Button
                     title="Exit"
-                    onPress={() => navigation.navigate("VillageEn")}
+                    onPress={() => navigation.navigate("VillageEnScreen")}
                 />
-                <ItemsMenu />
+                <ItemsMenuFAB />
                 <ExitButton />
             </ImageBackground>
         </View>
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default BlacksmithEn;
+export default BlacksmithEnScreen;
