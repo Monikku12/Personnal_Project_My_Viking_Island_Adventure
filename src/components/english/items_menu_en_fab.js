@@ -4,12 +4,23 @@ import { FAB, Portal } from "react-native-paper";
 
 import QuestListEnModal from "./quest_list_en_modal";
 
-const ItemsMenuFAB = () => {
+const ItemsMenu = () => {
     // const navigation = useNavigation();
 
     const [state, setState] = React.useState({ open: false });
     const onStateChange = ({ open }) => setState({ open });
     const { open } = state;
+
+    const [visible, setVisible] = React.useState(false);
+    const showModal = () => setVisible(true);
+    const hideModal = () => setVisible(false);
+
+    // Since the state is a boolean, you can set it to be the opposite of what it is currently with the following.
+    // const toggleModal = () => setVisible((prevState) => !prevState);
+
+    React.useEffect(() => {
+        console.log("visible changed:", visible);
+    }, [visible]);
 
     return (
         <Portal>
@@ -27,7 +38,8 @@ const ItemsMenuFAB = () => {
                     {
                         icon: "script-text-outline",
                         // label: "Quest",
-                        onPress: () => console.log("Pressed Quest"),
+                        // onPress: () => console.log("Pressed Options"),
+                        onPress: showModal,
                     },
                     {
                         icon: "book-open-page-variant-outline",
@@ -41,8 +53,15 @@ const ItemsMenuFAB = () => {
                     },
                 ]}
                 onStateChange={onStateChange}
+                onPress={() => {
+                    if (open) {
+                        // do something if the speed dial is open
+                    }
+                }}
             />
+            <QuestListEnModal isOpen={visible} onClose={hideModal} />
         </Portal>
+        // <QuestListEnModal/>
     );
 };
 
@@ -57,4 +76,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ItemsMenuFAB;
+export default ItemsMenu;

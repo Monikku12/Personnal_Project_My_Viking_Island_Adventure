@@ -1,68 +1,68 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Button, Modal, Portal } from "react-native-paper";
+import { StyleSheet } from "react-native";
+import { Modal, Portal, Text, Button } from "react-native-paper";
 
-function QuestListEnModal() {
-    const [visible, setVisible] = React.useState(false);
-    
-    const showModal = () => setVisible(true);
-    const hideModal = () => setVisible(false);
-    const containerStyle = { backgroundColor: "white", padding: 20 };
-    
+function QuestListEnModal({ isOpen, onClose }) {
+    React.useEffect(() => {
+        console.log("[QuestListEnModal] isOpen:", isOpen);
+    }, [isOpen]);
+
     return (
         <Portal>
             <Modal
-                contentContainerStyle={containerStyle}
-                // animationType="slide"
-                // transparent={true}
-                visible={visible}
-                onDismiss={hideModal}
-                // onRequestClose={() => {
-                //     setVisible(!visible);
-                // }}
+                visible={isOpen}
+                onDismiss={onClose}
+                contentContainerStyle={styles.containerStyle}
             >
-                
-                {/* <View style={styles.centeredView}> */}
-                    {/* <View style={styles.modalView}> */}
-                        {/* <Text style={styles.modalText}> */}
-                        <Text>
-                            Quests list goes here!!
-                        </Text>
-                        <Button
-                            style={styles.button}
-                            onPress={() => setVisible(!visible)}
-                        >
-                            <Text style={styles.textStyle}> ✕ </Text>
-                        </Button>
-                    {/* </View> */}
-                {/* </View> */}
-
+                <Text>Example Modal. Click outside this area to dismiss.</Text>
+                <Button
+                    style={styles.button}
+                    contentStyle={styles.contentStyle}
+                    labelStyle={styles.labelStyle}
+                    children="✕"
+                    buttonColor="blue"
+                    right="10%"
+                    top="5%"
+                    onPress={onClose}
+                ></Button>
             </Modal>
         </Portal>
     );
 }
 
-// const styles = StyleSheet.create({
-//     containerStyle: {
-//         flex: 1,
-//         justifyContent: "flex-end",
-//         alignItems: "flex-end",
-//         position: "absolute",
-//         size: "small",
-//         small: "true",
-//         margin: 15,
-//         right: 16,
-//         bottom: 16,
-//         backgroundColor: "white",
-//         padding: 20,
-//     },
-//     buttonView: {
-//         // flex: 1,
-//         textColor: "white",
-//         buttonColor: "black",
-//         justifyContent: "center",
-//         alignItems: "center",
-//     },
-// });
+const styles = StyleSheet.create({
+    containerStyle: {
+        backgroundColor: "white",
+        padding: 20,
+        // height: "60%",
+        // wide: "60%",
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 80,
+        marginBottom: 80,
+        marginLeft: 20,
+        marginRight: 20,
+        // position: "absolute"
+    },
+    contentStyle: {
+        flex: 1,
+        flexDirection: "row",
+        JustifyContent: "center",
+        alignItems: "center",
+    },
+    button: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        position: "absolute",
+        mode: "contained",
+    },
+    labelStyle: {
+        color: "black",
+        fontFamily: "viking_medium",
+        fontSize: 30,
+    },
+});
 
 export default QuestListEnModal;
