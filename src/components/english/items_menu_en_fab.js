@@ -18,9 +18,9 @@ const ItemsMenu = () => {
     // Since the state is a boolean, you can set it to be the opposite of what it is currently with the following.
     // const toggleModal = () => setVisible((prevState) => !prevState);
 
-    React.useEffect(() => {
-        console.log("visible changed:", visible);
-    }, [visible]);
+    // React.useEffect(() => {
+    //     console.log("visible changed:", visible);
+    // }, [visible]);
 
     return (
         <Portal>
