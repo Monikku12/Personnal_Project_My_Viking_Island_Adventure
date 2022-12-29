@@ -3,7 +3,13 @@ import { View, StyleSheet, ImageBackground } from "react-native";
 import { Modal, Portal, Text, IconButton, List } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/bag_background.jpg");
-const
+
+const item6 = require("../../images/items/cinnamon.png");
+const item1 = require("../../images/items/egg.png");
+const item2 = require("../../images/items/mint.png");
+const item3 = require("../../images/items/potion.png");
+const item4 = require("../../images/items/powder.png");
+const item5 = require("../../images/items/shell.png");
 
 function QuestListEnModal({ isOpen, onClose }) {
     // React.useEffect(() => {
@@ -25,9 +31,6 @@ function QuestListEnModal({ isOpen, onClose }) {
                     source={backgroundImage}
                     style={styles.imageBackground}
                 >
-                    <List.Subheader style={styles.text}>
-                        My Items
-                    </List.Subheader>
                     <IconButton
                         style={styles.button}
                         // contentStyle={styles.contentStyle}
@@ -38,37 +41,42 @@ function QuestListEnModal({ isOpen, onClose }) {
                         icon="close"
                         onPress={onClose}
                     />
-                    <View style={styles.listView}>
-                        <List.Image
-                            style={styles.itemImage}
-                            variant="image"
-                            source={require("../../images/items/egg.png")}
-                        />
-                        <List.Image
-                            style={styles.itemImage}
-                            variant="image"
-                            source={require("../../images/items/cinnamon.png")}
-                        />
-                        <List.Image
-                            style={styles.itemImage}
-                            variant="image"
-                            source={require("../../images/items/potion.png")}
-                        />
-                        <List.Image
-                            style={styles.itemImage}
-                            variant="image"
-                            source={require("../../images/items/shell.png")}
-                        />
-                        <List.Image
-                            style={styles.itemImage}
-                            variant="image"
-                            source={require("../../images/items/mint.png")}
-                        />
-                        <List.Image
-                            style={styles.itemImage}
-                            variant="image"
-                            source={require("../../images/items/powder.png")}
-                        />
+                    <View style={styles.modalView}>
+                        <List.Subheader style={styles.text}>
+                            My Items
+                        </List.Subheader>
+                        <View style={styles.listView}>
+                            <List.Image
+                                style={styles.itemImage}
+                                variant="image"
+                                source={item1}
+                            />
+                            <List.Image
+                                style={styles.itemImage}
+                                variant="image"
+                                source={item2}
+                            />
+                            <List.Image
+                                style={styles.itemImage}
+                                variant="image"
+                                source={item3}
+                            />
+                            <List.Image
+                                style={styles.itemImage}
+                                variant="image"
+                                source={item4}
+                            />
+                            <List.Image
+                                style={styles.itemImage}
+                                variant="image"
+                                source={item5}
+                            />
+                            <List.Image
+                                style={styles.itemImage}
+                                variant="image"
+                                source={item6}
+                            />
+                        </View>
                     </View>
                 </ImageBackground>
             </Modal>
@@ -100,37 +108,59 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
-    listView: {
+    modalView: {
         flex: 1,
+        // justifyContent: "center",
+        // alignItems: "center",
+        // backgroundColor: "red",
+    },
+    text: {
+        flex: 1,
+        justifyContent: "center",
+        color: "black",
+        fontSize: 22,
+        lineHeight: 25,
+        // fontWeight: "bold",
+        fontFamily: "almendra_bold",
+        textAlign: "center",
+        textAlignVertical: "center",
+        includeFontPadding: false,
+        backgroundColor: "#AE6F4C",
+        marginTop: "2%",
+        marginLeft: "40%",
+        marginRight: "40%",
+        marginBottom: "2%",
+        // position: "absolute",
+        // top: "5%",
+        borderWidth: 1,
+        borderColor: "black",
+    },
+    listView: {
+        flex: 12,
         flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
+        flexWrap: "wrap",
+        // justifyContent: "space-around",
+        // alignItems: "stretch",
+        // alignContent: "stretch",
+        backgroundColor: "grey",
     },
     itemImage: {
         flex: 1,
+        // flexWrap: "wrap",
         resizeMode: "center",
-        // justifyContent: "center",
-        // alignItems: "center",
-        width: "100%",
-        height: "100%",
-        tintColor: "black",
+        // justifyContent: "space-around",
+        // alignContent: "stretch",
+        // width: "100%",
+        // height: "100%",
+        // tintColor: "black",
         borderRadius: 20,
-        backgroundColor: "transparent",
+        backgroundColor: "red",
         borderColor: "black",
         borderWidth: 2,
         margin: "2%",
-        paddingBottom: 30,
-        paddingTop: 15,
+        // paddingBottom: 30,
+        // paddingTop: 15,
     },
-    // textView: {
-    //     flex: 0,
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //     position: "absolute",
-    //     top: "5%",
-    //     padding: 15,
-    // },
-
     button: {
         flex: 1,
         justifyContent: "center",
@@ -139,22 +169,6 @@ const styles = StyleSheet.create({
         mode: "text",
         right: "2%",
         top: "5%",
-    },
-    text: {
-        flex: 1,
-        justifyContent: "center",
-        color: "black",
-        fontSize: 12,
-        lineHeight: 15,
-        fontWeight: "bold",
-        textAlign: "center",
-        backgroundColor: "#AE6F4C",
-        marginLeft: "40%",
-        marginRight: "40%",
-        position: "absolute",
-        top: "5%",
-        borderWidth: 1,
-        borderColor: "black",
     },
 });
 

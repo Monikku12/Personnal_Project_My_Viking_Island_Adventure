@@ -34,6 +34,8 @@ const Stack = createNativeStackNavigator();
 function App() {
     const [loaded] = useFonts({
         viking_medium: require("./assets/fonts/viking_medium.ttf"),
+        almendra_regular: require("./assets/fonts/almendra_regular.ttf"),
+        almendra_bold: require("./assets/fonts/almendra_bold.ttf"),
     });
 
     if (!loaded) {
