@@ -3,6 +3,7 @@ import { View, StyleSheet, ImageBackground } from "react-native";
 import { Modal, Portal, Text, IconButton, List } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/bag_background.jpg");
+const
 
 function QuestListEnModal({ isOpen, onClose }) {
     // React.useEffect(() => {
@@ -62,6 +63,11 @@ function QuestListEnModal({ isOpen, onClose }) {
                             style={styles.itemImage}
                             variant="image"
                             source={require("../../images/items/mint.png")}
+                        />
+                        <List.Image
+                            style={styles.itemImage}
+                            variant="image"
+                            source={require("../../images/items/powder.png")}
                         />
                     </View>
                 </ImageBackground>
