@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet } from "react-native";
 import { FAB, Portal } from "react-native-paper";
 
-import QuestListEnModal from "./quest_list_en_modal";
+import BagEnModal from "./bag_en_modal";
 
 const ItemsMenu = () => {
     // const navigation = useNavigation();
@@ -12,8 +12,8 @@ const ItemsMenu = () => {
     const { open } = state;
 
     const [visible, setVisible] = React.useState(false);
-    const showModal = () => setVisible(true);
-    const hideModal = () => setVisible(false);
+    const showBagModal = () => setVisible(true);
+    const hideBagModal = () => setVisible(false);
 
     // Since the state is a boolean, you can set it to be the opposite of what it is currently with the following.
     // const toggleModal = () => setVisible((prevState) => !prevState);
@@ -33,13 +33,13 @@ const ItemsMenu = () => {
                     {
                         icon: "cog-outline",
                         // label: "Options",
-                        onPress: () => console.log("Pressed Options"),
+                        onPress: () => console.log("Pressed Quests"),
                     },
                     {
                         icon: "script-text-outline",
                         // label: "Quest",
-                        // onPress: () => console.log("Pressed Options"),
-                        onPress: showModal,
+                        onPress: () => console.log("Pressed Options"),
+                        // onPress: showModal,
                     },
                     {
                         icon: "book-open-page-variant-outline",
@@ -49,7 +49,7 @@ const ItemsMenu = () => {
                     {
                         icon: "bag-personal",
                         // label: "Items",
-                        onPress: () => console.log("Pressed Items"),
+                        onPress: showBagModal,
                     },
                 ]}
                 onStateChange={onStateChange}
@@ -59,7 +59,7 @@ const ItemsMenu = () => {
                     }
                 }}
             />
-            <QuestListEnModal isOpen={visible} onClose={hideModal} />
+            <BagEnModal isOpen={visible} onClose={hideBagModal} />
         </Portal>
         // <QuestListEnModal/>
     );

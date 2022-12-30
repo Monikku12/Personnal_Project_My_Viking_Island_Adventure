@@ -7,7 +7,7 @@ import { useFonts } from "expo-font";
 
 import TitleScreen from "./src/components/title_screen";
 
-import BagEn from "./src/components/english/bag_en";
+import BagEn from "./src/components/english/bag_en_modal";
 import BedroomEnScreen from "./src/components/english/bedroom_en_screen";
 import BlacksmithEnScreen from "./src/components/english/blacksmith_en_screen";
 import FarmEnScreen from "./src/components/english/farm_en_screen";
