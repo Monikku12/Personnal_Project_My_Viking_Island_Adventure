@@ -6,12 +6,12 @@ const backgroundImage = require("../../images/background/bag_background.jpg");
 
 // const deviceHeight = Dimensions.get("window").height;
 
-const item6 = require("../../images/items/cinnamon.png");
 const item1 = require("../../images/items/egg.png");
 const item2 = require("../../images/items/mint.png");
 const item3 = require("../../images/items/potion.png");
 const item4 = require("../../images/items/powder.png");
 const item5 = require("../../images/items/shell.png");
+const item6 = require("../../images/items/cinnamon.png");
 
 function BagEnModal({ isOpen, onClose }) {
     // React.useEffect(() => {
@@ -35,8 +35,6 @@ function BagEnModal({ isOpen, onClose }) {
                 >
                     <IconButton
                         style={styles.button}
-                        // contentStyle={styles.contentStyle}
-                        // labelStyle={styles.labelStyle}
                         containerColor="#AE6F4C"
                         iconColor="black"
                         animated="true"
@@ -101,6 +99,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         borderRadius: 10,
+
         // height: "60%",
         // wide: "60%",
         // position: "absolute"
@@ -124,6 +123,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignContent: "center",
         width: "100%",
+
         // flexDirection: "row",
         // alignItems: "space-around",
         // backgroundColor: "blue",
@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
         marginTop: "2%",
         borderWidth: 1,
         borderColor: "black",
+
         // flex: 1,
         // alignItems: "center",
         // justifyContent: "center",
@@ -158,6 +159,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignContent: "center",
         width: "100%",
+
         // justifyContent: "space-around",
         //     flex: 12,
         //     flexDirection: "row",
@@ -173,10 +175,12 @@ const styles = StyleSheet.create({
         resizeMode: "center",
         flexBasis: 165,
         tintColor: "black",
-        borderRadius: 20,
-        borderColor: "black",
-        borderWidth: 3,
+        opacity: 0.6,
         margin: "2%",
+        // borderRadius: 20,
+        // borderColor: "black",
+        // borderWidth: 3,
+
         // flex: 1,
         // flexDirection: "row",
         // flexWrap: "wrap",
