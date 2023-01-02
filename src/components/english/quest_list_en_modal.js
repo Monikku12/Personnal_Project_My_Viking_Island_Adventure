@@ -1,22 +1,21 @@
 import * as React from "react";
-import { View, StyleSheet, ImageBackground, Icon } from "react-native";
+import { View, StyleSheet, ImageBackground } from "react-native";
 import {
     Modal,
     Portal,
     IconButton,
     List,
-    Image,
     Avatar,
 } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/quest_list_background.png");
 
-const item1 = require("../../images/items/egg.png");
-const item2 = require("../../images/items/mint.png");
-const item3 = require("../../images/items/potion.png");
-const item4 = require("../../images/items/powder.png");
-const item5 = require("../../images/items/shell.png");
-const item6 = require("../../images/items/cinnamon.png");
+const item1 = require("../../images/icons/egg.png");
+const item2 = require("../../images/icons/mint.png");
+const item3 = require("../../images/icons/potion.png");
+const item4 = require("../../images/icons/powder.png");
+const item5 = require("../../images/icons/shell.png");
+const item6 = require("../../images/icons/cinnamon.png");
 
 function QuestListEnModal({ isOpen, onClose }) {
     return (
@@ -44,19 +43,72 @@ function QuestListEnModal({ isOpen, onClose }) {
                         </List.Subheader>
                         <View style={styles.listView}>
                             <List.Item
-                                title="Eggs X 3"
-                                // description="Item description"
-                                left={(props) => (
+                                style={styles.questItem}
+                                title="3 eggs"
+                                titleStyle={styles.questItemTitle}
+                                left={() => (
                                     <Avatar.Image
-                                        style={styles.itemIcon}
+                                        style={styles.questItemIcon}
                                         source={item1}
                                     />
                                 )}
                             />
                             <List.Item
-                                title="First Item"
-                                description="Item description"
-                                //   left={props => <Image {...props} source="item1" />}
+                                style={styles.questItem}
+                                title="2 mint leaves"
+                                titleStyle={styles.questItemTitle}
+                                left={() => (
+                                    <Avatar.Image
+                                        style={styles.questItemIcon}
+                                        source={item2}
+                                    />
+                                )}
+                            />
+                            <List.Item
+                                style={styles.questItem}
+                                title="2 flasks of viper's venom"
+                                titleStyle={styles.questItemTitle}
+                                left={() => (
+                                    <Avatar.Image
+                                        style={styles.questItemIcon}
+                                        source={item3}
+                                    />
+                                )}
+                            />
+                            <List.Item
+                                style={styles.questItem}
+                                title="6 spoons of rhomb-porphyry rock powder"
+                                titleStyle={styles.questItemTitle}
+                                left={() => (
+                                    <Avatar.Image
+                                        style={styles.questItemIcon}
+                                        source={item4}
+                                    />
+                                )}
+                            />
+                            <List.Item
+                                style={styles.questItem}
+                                title="5 shells"
+                                titleStyle={
+                                    (styles.questItemTitle)
+                                }
+                                left={() => (
+                                    <Avatar.Image
+                                        style={styles.questItemIcon}
+                                        source={item5}
+                                    />
+                                )}
+                            />
+                            <List.Item
+                                style={styles.questItem}
+                                title="1 cinnamon stick"
+                                titleStyle={styles.questItemTitle}
+                                left={() => (
+                                    <Avatar.Image
+                                        style={styles.questItemIcon}
+                                        source={item6}
+                                    />
+                                )}
                             />
                         </View>
                     </List.Section>
@@ -68,7 +120,6 @@ function QuestListEnModal({ isOpen, onClose }) {
 
 const styles = StyleSheet.create({
     containerStyle: {
-        // backgroundColor: "green",
         padding: 0,
         flex: 1,
         flexDirection: "row",
@@ -79,10 +130,6 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         borderRadius: 10,
-
-        // height: "60%",
-        // wide: "60%",
-        // position: "absolute"
     },
     imageBackground: {
         flex: 1,
@@ -91,97 +138,61 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
-    // modalView: {
-    //     flex: 1,
-    //     // justifyContent: "center",
-    //     // alignItems: "center",
-    //     backgroundColor: "yellow",
-    // },
     listSection: {
         flex: 1,
         flexWrap: "wrap",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignContent: "center",
         width: "100%",
-
-        // flexDirection: "row",
-        // alignItems: "space-around",
-        // backgroundColor: "blue",
     },
     subheader: {
         alignSelf: "center",
         color: "black",
         fontSize: 22,
-        lineHeight: 25,
+        lineHeight: 15,
         fontFamily: "almendra_bold",
         textAlign: "center",
-        textAlignVertical: "center",
+        textAlignVertical: "bottom",
         includeFontPadding: false,
         textDecorationLine: "underline",
-        marginTop: "2%",
-        // textShadowColor: "#8C6C31",
-        // textShadowOffset: { width: 1, height: 1 },
-        // textShadowRadius: 6,
-        // backgroundColor: "#AE6F4C",
-        // opacity: 0.7,
-        // borderWidth: 1,
-        // borderColor: "black",
-
-        // flex: 1,
-        // alignItems: "center",
-        // justifyContent: "center",
-        // fontWeight: "bold",
-        // marginLeft: "40%",
-        // marginRight: "40%",
-        // marginBottom: "2%",
-        // position: "relative",
-        // top: "5%",
+        marginTop: 15,
     },
     listView: {
         flex: 1,
         flexWrap: "wrap",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignContent: "center",
-        width: "100%",
-
-        // justifyContent: "space-around",
-        //     flex: 12,
-        //     flexDirection: "row",
-        //     flexWrap: "wrap",
-        //     justifyContent: "space-around",
-        //     alignItems: "center",
-        //     // alignContent: "stretch",
-        // flexBasis: 50,
-        // height: "100%",
-        backgroundColor: "grey",
+        width: "90%",
+        justifyContent: "flex-start",
+        alignContent: "stretch",
+        marginTop: -20,
     },
-    itemIcon: {
-        size: 20,
-        //   width: 20,
-        //     resizeMode: "center",
-        //     flexBasis: 165,
-        //     tintColor: "black",
-        //     opacity: 0.6,
-        //     margin: "2%",
-        // borderRadius: 20,
-        // borderColor: "black",
-        // borderWidth: 3,
-
-        // flex: 1,
-        // flexDirection: "row",
-        // flexWrap: "wrap",
-        // shadowColor: "black",
-        // justifyContent: "space-around",
-        // alignItems: "center",
-        // alignContent: "stretch",
-        // width: 50,
-        // width: "100%",
-        // height: 30,
-        // height: deviceHeight /2,
+    questItem: {
+        justifyContent: "center",
+        alignContent: "flex-start",
+        marginBottom: "-1%",
+    },
+    questItemTitle: {
+        alignSelf: "flex-start",
+        color: "black",
+        fontSize: 15,
+        lineHeight: 20,
+        fontFamily: "almendra_bold",
+        textAlign: "left",
+        textAlignVertical: "center",
+        includeFontPadding: false,
+        numberOfLines: "2",
+        marginLeft: -2,
+        marginRight: -25,
+    },
+    questItemIcon: {
+        resizeMode: " center",
         backgroundColor: "transparent",
-        // paddingBottom: 30,
-        // paddingTop: 15,
+    },
+    questItemTitleDone: {
+        textDecorationLine: "line-through",
+        opacity: 0.5,
+    },
+    questItemIconDone: {
+        opacity: 0.5,
     },
     button: {
         flex: 1,
