@@ -4,6 +4,7 @@ import { FAB, Portal } from "react-native-paper";
 
 import BagEnModal from "./bag_en_modal";
 import QuestListEnModal from "./quest_list_en_modal";
+import OptionEnModal from "./options_en_modal";
 
 const ItemsMenu = () => {
     // const navigation = useNavigation();
@@ -19,6 +20,10 @@ const ItemsMenu = () => {
     const [questVisible, setQuestVisible] = React.useState(false);
     const showQuestModal = () => setQuestVisible(true);
     const hideQuestModal = () => setQuestVisible(false);
+
+    const [optionVisible, setOptionVisible] = React.useState(false);
+    const showOptionModal = () => setOptionVisible(true);
+    const hideOptionModal = () => setOptionVisible(false);
 
     // Since the state is a boolean, you can set it to be the opposite of what it is currently with the following.
     // const toggleModal = () => setVisible((prevState) => !prevState);
@@ -38,7 +43,7 @@ const ItemsMenu = () => {
                     {
                         icon: "cog-outline",
                         // label: "Options",
-                        onPress: () => console.log("Pressed Options"),
+                        onPress: showOptionModal,
                     },
                     {
                         icon: "script-text-outline",
@@ -66,6 +71,7 @@ const ItemsMenu = () => {
             />
             <BagEnModal isOpen={bagVisible} onClose={hideBagModal} />
             <QuestListEnModal isOpen={questVisible} onClose={hideQuestModal} />
+            <OptionEnModal isOpen={optionVisible} onClose={hideOptionModal} />
         </Portal>
         // <QuestListEnModal/>
     );

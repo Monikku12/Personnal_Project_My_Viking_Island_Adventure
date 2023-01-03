@@ -4,7 +4,6 @@ import { Modal, Portal, IconButton, List } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/bag_background.jpg");
 
-// const deviceHeight = Dimensions.get("window").height;
 
 const item1 = require("../../images/items/egg.png");
 const item2 = require("../../images/items/mint.png");
@@ -41,7 +40,6 @@ function BagEnModal({ isOpen, onClose }) {
                         icon="close"
                         onPress={onClose}
                     />
-                    {/* <View style={styles.modalView}> */}
                     <List.Section style={styles.listSection}>
                         <List.Subheader style={styles.subheader}>
                             My Items
@@ -79,7 +77,6 @@ function BagEnModal({ isOpen, onClose }) {
                             />
                         </View>
                     </List.Section>
-                    {/* </View> */}
                 </ImageBackground>
             </Modal>
         </Portal>
@@ -99,10 +96,6 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         borderRadius: 10,
-
-        // height: "60%",
-        // wide: "60%",
-        // position: "absolute"
     },
     imageBackground: {
         flex: 1,
@@ -111,22 +104,12 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
-    // modalView: {
-    //     flex: 1,
-    //     // justifyContent: "center",
-    //     // alignItems: "center",
-    //     backgroundColor: "yellow",
-    // },
     listSection: {
         flex: 1,
         flexWrap: "wrap",
         justifyContent: "center",
         alignContent: "center",
         width: "100%",
-
-        // flexDirection: "row",
-        // alignItems: "space-around",
-        // backgroundColor: "blue",
     },
     subheader: {
         alignSelf: "center",
@@ -141,16 +124,6 @@ const styles = StyleSheet.create({
         marginTop: "2%",
         borderWidth: 1,
         borderColor: "black",
-
-        // flex: 1,
-        // alignItems: "center",
-        // justifyContent: "center",
-        // fontWeight: "bold",
-        // marginLeft: "40%",
-        // marginRight: "40%",
-        // marginBottom: "2%",
-        // position: "relative",
-        // top: "5%",
     },
     listView: {
         flex: 1,
@@ -159,17 +132,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignContent: "center",
         width: "100%",
-
-        // justifyContent: "space-around",
-        //     flex: 12,
-        //     flexDirection: "row",
-        //     flexWrap: "wrap",
-        //     justifyContent: "space-around",
-        //     alignItems: "center",
-        //     // alignContent: "stretch",
-        // flexBasis: 50,
-        // height: "100%",
-        // backgroundColor: "grey",
     },
     itemImage: {
         resizeMode: "center",
@@ -177,24 +139,6 @@ const styles = StyleSheet.create({
         tintColor: "black",
         opacity: 0.6,
         margin: "2%",
-        // borderRadius: 20,
-        // borderColor: "black",
-        // borderWidth: 3,
-
-        // flex: 1,
-        // flexDirection: "row",
-        // flexWrap: "wrap",
-        // shadowColor: "black",
-        // justifyContent: "space-around",
-        // alignItems: "center",
-        // alignContent: "stretch",
-        // width: 50,
-        // width: "100%",
-        // height: 30,
-        // height: deviceHeight /2,
-        // backgroundColor: "red",
-        // paddingBottom: 30,
-        // paddingTop: 15,
     },
     button: {
         flex: 1,
