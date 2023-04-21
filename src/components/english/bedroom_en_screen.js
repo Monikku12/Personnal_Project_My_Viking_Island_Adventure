@@ -2,7 +2,7 @@ import * as React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 
 import ItemsMenuFAB from "./items_menu_en_fab.js";
-import ExitButton from "../exit_button";
+import ExitButtonEnBedroom from "./exit_button_en_bedroom.js";
 
 const backgroundImage = require("../../images/background/bedroom_background.jpg");
 
@@ -17,7 +17,7 @@ function BedroomEnScreen() {
             >
                 <Text style={styles.text}>This is the Bedroom</Text>
                 <ItemsMenuFAB />
-                <ExitButton />
+                <ExitButtonEnBedroom />
             </ImageBackground>
         </View>
     );

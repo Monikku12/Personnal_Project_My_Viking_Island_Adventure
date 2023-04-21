@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 
 import ItemsMenuFAB from "./items_menu_en_fab.js";
-import ExitButton from "../exit_button";
+import ExitButtonEn from "./exit_button_en";
 
 const backgroundImage = require("../../images/background/blacksmith_background.jpg");
 
@@ -22,7 +22,7 @@ function BlacksmithEnScreen({ navigation }) {
                     onPress={() => navigation.navigate("VillageEnScreen")}
                 />
                 <ItemsMenuFAB />
-                <ExitButton />
+                <ExitButtonEn />
             </ImageBackground>
         </View>
     );

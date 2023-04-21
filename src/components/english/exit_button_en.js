@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import { FAB } from "react-native-paper";
 
-function ExitButton( ) {
+function ExitButtonEn() {
     const navigation = useNavigation();
 
     return (
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ExitButton;
+export default ExitButtonEn;

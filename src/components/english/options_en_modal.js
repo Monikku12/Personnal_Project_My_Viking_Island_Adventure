@@ -5,7 +5,7 @@ import {
     Portal,
     IconButton,
     List,
-    Switch,
+    // Switch,
     SegmentedButtons,
 } from "react-native-paper";
 

@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 
 import ItemsMenuFAB from "./items_menu_en_fab.js";
-import ExitButton from "../exit_button";
+import ExitButtonEn from "./exit_button_en.js";
 
 const backgroundImage = require("../../images/background/longhouse_inside_background.jpg");
 
@@ -20,19 +20,17 @@ function LonghouseEnScreen({ navigation }) {
                 <Button
                     style={styles.button}
                     children="BedroomEn"
-                    mode="outlined"
-                    width="30%"
-                    height="30%"
-                    left="-38%"
-                    bottom="25%"
+                    mode="contained"
+                    // mode="outlined"
                     onPress={() => navigation.navigate("BedroomEnScreen")}
                 />
                 <Button
                     title="Exit"
-                    onPress={() => navigation.navigate("VillageEnScreen")}
+                    // onPress={() => navigation.navigate("VillageEnScreen")}
+                    // onPress={() => navigation.navigate("BedroomEnScreen")}
                 />
                 <ItemsMenuFAB />
-                <ExitButton />
+                <ExitButtonEn />
             </ImageBackground>
         </View>
     );
@@ -58,6 +56,14 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         backgroundColor: "white",
+    },
+    button: {
+        // backgroundColor: "pink",
+        // color: "cyan",
+        width: "33%",
+        height: "45%",
+        left:"1%",
+        bottom: "-15%",
     },
 });
 
