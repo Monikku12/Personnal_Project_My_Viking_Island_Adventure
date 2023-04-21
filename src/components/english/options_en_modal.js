@@ -100,7 +100,7 @@ function OptionEnModal ({ isOpen, onClose }) {
                                 title="Credits"
                                 titleStyle={styles.questItemTitle}
                                 description={
-                                    'Programmer: Monique "Monichan" Payment-Boulanger\nDesigner/Artist: Joshua "Emmanuel" Minor'
+                                    'Programmer: Monique "Monichan" Payment-Boulanger\nArtist: Joshua "Emmanuel" Minor'
                                 }
                                 descriptionStyle={styles.questItemDescription}
                             />
@@ -116,81 +116,79 @@ const styles = StyleSheet.create({
     containerStyle: {
         padding: 0,
         flex: 1,
-        flexDirection: "row",
+        // flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        // alignContent: "center",
         marginTop: 40,
         marginBottom: 40,
         marginLeft: 20,
         marginRight: 20,
         borderRadius: 10,
+        backgroundColor: "grey",
     },
     imageBackground: {
         flex: 1,
-        resizeMode: "cover",
+        resizeMode: "center",
         justifyContent: "center",
-        width: "100%",
-        height: "100%",
+        width: "98%",
+        // height: "100%",
+        // borderRadius: 10,
     },
     listSection: {
         flex: 1,
         flexWrap: "wrap",
-        justifyContent: "flex-start",
-        alignContent: "center",
-        width: "100%",
-    },
-    subheader: {
-        alignSelf: "center",
-        color: "black",
-        fontSize: 22,
-        lineHeight: 15,
-        fontFamily: "almendra_bold",
-        textAlign: "center",
-        textAlignVertical: "bottom",
-        includeFontPadding: false,
-        textDecorationLine: "underline",
-        marginTop: 15,
-    },
-    listView: {
-        flex: 1,
-        flexWrap: "wrap",
-        width: "90%",
-        justifyContent: "flex-start",
-        alignContent: "stretch",
-        marginTop: -20,
-    },
-    questItem: {
         justifyContent: "center",
-        alignContent: "flex-start",
-        marginBottom: "-1%",
+        alignItems: "center",
+        alignContent: "center",
+        width: "99%",
+        // backgroundColor: "cyan"
     },
-    questItemTitle: {
-        alignSelf: "flex-start",
-        color: "black",
-        fontSize: 15,
-        lineHeight: 20,
-        fontFamily: "almendra_bold",
-        textAlign: "left",
-        textAlignVertical: "center",
-        includeFontPadding: false,
-        numberOfLines: "2",
-        marginLeft: -2,
-        marginRight: -25,
-    },
-    languageButton: {
-        backgroundColor: "violet",
-    },
-    questItemIcon: {
-        resizeMode: " center",
-        backgroundColor: "transparent",
-    },
-    questItemTitleDone: {
-        textDecorationLine: "line-through",
-        opacity: 0.5,
-    },
-    questItemIconDone: {
-        opacity: 0.5,
-    },
+    // subheader: {
+    //     alignSelf: "center",
+    //     color: "black",
+    //     fontSize: 22,
+    //     lineHeight: 15,
+    //     fontFamily: "almendra_bold",
+    //     textAlign: "center",
+    //     textAlignVertical: "bottom",
+    //     includeFontPadding: false,
+    //     textDecorationLine: "underline",
+    //     marginTop: 15,
+    // },
+    // listView: {
+    //     flex: 1,
+    //     flexWrap: "wrap",
+    //     width: "90%",
+    //     justifyContent: "flex-start",
+    //     alignContent: "stretch",
+    //     marginTop: -20,
+    // },
+    // questItem: {
+    //     justifyContent: "center",
+    //     alignContent: "flex-start",
+    //     marginBottom: "-1%",
+    // },
+    // questItemTitle: {
+    //     alignSelf: "flex-start",
+    //     color: "black",
+    //     fontSize: 15,
+    //     lineHeight: 20,
+    //     fontFamily: "almendra_bold",
+    //     textAlign: "left",
+    //     textAlignVertical: "center",
+    //     includeFontPadding: false,
+    //     numberOfLines: "2",
+    //     marginLeft: -2,
+    //     marginRight: -25,
+    // },
+    // languageButton: {
+    //     backgroundColor: "violet",
+    // },
+    // questItemIcon: {
+    //     resizeMode: " center",
+    //     backgroundColor: "transparent",
+    // },
     button: {
         flex: 1,
         justifyContent: "center",
