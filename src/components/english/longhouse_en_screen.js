@@ -1,5 +1,11 @@
 import * as React from "react";
-import { View, Text, ImageBackground, StyleSheet } from "react-native";
+import {
+    View,
+    Text,
+    ImageBackground,
+    StyleSheet,
+    Pressable,
+} from "react-native";
 import { Button } from "react-native-paper";
 
 import ItemsMenuFAB from "./items_menu_en_fab.js";
@@ -17,13 +23,13 @@ function LonghouseEnScreen({ navigation }) {
                 style={styles.imageBackground}
             >
                 <Text style={styles.text}>LonghouseEn Screen</Text>
-                <Button
-                    style={styles.button}
-                    children="BedroomEn"
-                    mode="contained"
+                <Pressable
+                    style={styles.pressable}
+                    // mode="contained"
                     // mode="outlined"
-                    onPress={() => navigation.navigate("BedroomEnScreen")}
-                />
+                    onPress={() => navigation.navigate("BedroomEnScreen")}>
+                    {/* <Text> "BedroomEn" </Text> */}
+                </Pressable>
                 <Button
                     title="Exit"
                     // onPress={() => navigation.navigate("VillageEnScreen")}
@@ -57,13 +63,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
         backgroundColor: "white",
     },
-    button: {
-        // backgroundColor: "pink",
-        // color: "cyan",
+    pressable: {
         width: "33%",
         height: "45%",
-        left:"1%",
+        left: "1%",
         bottom: "-15%",
+        // backgroundColor: "pink",
     },
 });
 
