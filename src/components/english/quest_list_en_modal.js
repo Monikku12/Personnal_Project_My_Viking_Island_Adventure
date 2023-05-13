@@ -31,7 +31,7 @@ function QuestListEnModal({ isOpen, onClose }) {
                 >
                     <IconButton
                         style={styles.button}
-                        containerColor="#D9A74D"
+                        containerColor="transparent"
                         iconColor="black"
                         animated="true"
                         icon="close"
@@ -77,7 +77,7 @@ function QuestListEnModal({ isOpen, onClose }) {
                             />
                             <List.Item
                                 style={styles.questItem}
-                                title="6 spoons of rhomb-porphyry rock powder"
+                                title="6 spoons of rock powder"
                                 titleStyle={styles.questItemTitle}
                                 left={() => (
                                     <Avatar.Image

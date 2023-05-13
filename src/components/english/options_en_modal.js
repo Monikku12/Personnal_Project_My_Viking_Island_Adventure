@@ -28,7 +28,7 @@ function OptionEnModal ({ isOpen, onClose }) {
                 >
                     <IconButton
                         style={styles.button}
-                        containerColor="#D9A74D"
+                        containerColor="transparent"
                         iconColor="black"
                         animated="true"
                         icon="close"
@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "center",
         justifyContent: "center",
-        width: "98%",
-        // height: "100%",
+        // width: "100%",
+        height: "100%",
         // borderRadius: 10,
     },
     listSection: {
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
-        width: "99%",
+        width: "80%",
         // backgroundColor: "cyan"
     },
     // subheader: {

@@ -34,14 +34,14 @@ function BagEnModal({ isOpen, onClose }) {
                 >
                     <IconButton
                         style={styles.button}
-                        containerColor="#AE6F4C"
+                        containerColor="transparent"
                         iconColor="black"
                         animated="true"
                         icon="close"
                         onPress={onClose}
                     />
                     <List.Section style={styles.listSection}>
-                        <List.Subheader style={styles.subheader}>
+                        <List.Subheader style={styles.header}>
                             My Items
                         </List.Subheader>
                         <View style={styles.listView}>
@@ -85,7 +85,7 @@ function BagEnModal({ isOpen, onClose }) {
 
 const styles = StyleSheet.create({
     containerStyle: {
-        backgroundColor: "green",
+        backgroundColor: "blue",
         padding: 0,
         flex: 1,
         flexDirection: "row",
@@ -95,14 +95,23 @@ const styles = StyleSheet.create({
         marginBottom: 40,
         marginLeft: 20,
         marginRight: 20,
-        borderRadius: 10,
+        borderRadius: 15,
+        overflow: "hidden",
     },
     imageBackground: {
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
-        width: "100%",
-        height: "100%",
+        // width: "100%",
+        // height: "100%",
+        borderColor: "#77814A",
+        borderWidth: 10,
+        borderRadius: 25,
+        overflow: "hidden",
+        marginLeft: 15,
+        marginRight: 15,
+        marginTop: 15,
+        marginBottom: 10,
     },
     listSection: {
         flex: 1,
@@ -110,20 +119,24 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignContent: "center",
         width: "100%",
+        // borderColor: "#501600",
+        // borderWidth: 10,
+        borderRadius: 15,
+        overflow: "hidden",
     },
-    subheader: {
+    header: {
         alignSelf: "center",
         color: "black",
-        fontSize: 22,
+        fontSize: 25,
         lineHeight: 25,
         fontFamily: "almendra_bold",
         textAlign: "center",
         textAlignVertical: "center",
         includeFontPadding: false,
-        backgroundColor: "#AE6F4C",
+        // backgroundColor: "#AE6F4C",
         marginTop: "2%",
-        borderWidth: 1,
-        borderColor: "black",
+        // borderWidth: 1,
+        // borderColor: "black",
     },
     listView: {
         flex: 1,
@@ -145,9 +158,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
-        mode: "text",
-        right: "2%",
-        top: "5%",
+        mode: "contained",
+        backgroundColor: "#77814A",
+        right: "-4%",
+        top: "-10%",
+        overflow: "visible",
     },
 });
 
