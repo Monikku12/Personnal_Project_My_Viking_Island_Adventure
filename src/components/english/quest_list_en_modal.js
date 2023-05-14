@@ -120,6 +120,7 @@ function QuestListEnModal({ isOpen, onClose }) {
 
 const styles = StyleSheet.create({
     containerStyle: {
+        shadowColor: "transparent",
         padding: 0,
         flex: 1,
         flexDirection: "row",
@@ -201,7 +202,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         mode: "text",
         right: "2%",
-        top: "5%",
+        top: "3%",
     },
 });
 

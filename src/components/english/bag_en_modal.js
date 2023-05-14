@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, StyleSheet, ImageBackground, Dimensions } from "react-native";
-import { Modal, Portal, IconButton, List } from "react-native-paper";
+import { Modal, Portal, IconButton, List, Text } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/bag_background.jpg");
 
@@ -28,54 +28,92 @@ function BagEnModal({ isOpen, onClose }) {
                 onDismiss={onClose}
                 contentContainerStyle={styles.containerStyle}
             >
+                <IconButton
+                    style={styles.button}
+                    containerColor="transparent"
+                    iconColor="black"
+                    animated="true"
+                    icon="close"
+                    onPress={onClose}
+                />
                 <ImageBackground
                     source={backgroundImage}
                     style={styles.imageBackground}
                 >
-                    <IconButton
-                        style={styles.button}
-                        containerColor="transparent"
-                        iconColor="black"
-                        animated="true"
-                        icon="close"
-                        onPress={onClose}
-                    />
-                    <List.Section style={styles.listSection}>
-                        <List.Subheader style={styles.header}>
-                            My Items
-                        </List.Subheader>
-                        <View style={styles.listView}>
-                            <List.Image
-                                style={styles.itemImage}
-                                variant="image"
-                                source={item1}
-                            />
-                            <List.Image
-                                style={styles.itemImage}
-                                variant="image"
-                                source={item2}
-                            />
-                            <List.Image
-                                style={styles.itemImage}
-                                variant="image"
-                                source={item3}
-                            />
-                            <List.Image
-                                style={styles.itemImage}
-                                variant="image"
-                                source={item4}
-                            />
-                            <List.Image
-                                style={styles.itemImage}
-                                variant="image"
-                                source={item5}
-                            />
-                            <List.Image
-                                style={styles.itemImage}
-                                variant="image"
-                                source={item6}
-                            />
-                        </View>
+                    <Text style={styles.text}>My Items</Text>
+                    <List.Section style={styles.listSectionAllItems}>
+                        <List.Item
+                            style={styles.listSectionEachItem}
+                            title="x 1"
+                            titleStyle={styles.title}
+                            left={() => (
+                                <List.Image
+                                    style={styles.itemImage}
+                                    variant="image"
+                                    source={item1}
+                                />
+                            )}
+                        />
+                        <List.Item
+                            style={styles.listSectionEachItem}
+                            title="x 1"
+                            titleStyle={styles.title}
+                            left={() => (
+                                <List.Image
+                                    style={styles.itemImage}
+                                    variant="image"
+                                    source={item2}
+                                />
+                            )}
+                        />
+                        <List.Item
+                            style={styles.listSectionEachItem}
+                            title="x 1"
+                            titleStyle={styles.title}
+                            left={() => (
+                                <List.Image
+                                    style={styles.itemImage}
+                                    variant="image"
+                                    source={item3}
+                                />
+                            )}
+                        />
+                        <List.Item
+                            style={styles.listSectionEachItem}
+                            title="x 1"
+                            titleStyle={styles.title}
+                            left={() => (
+                                <List.Image
+                                    style={styles.itemImage}
+                                    variant="image"
+                                    source={item4}
+                                />
+                            )}
+                        />
+                        <List.Item
+                            style={styles.listSectionEachItem}
+                            title="x 1"
+                            titleStyle={styles.title}
+                            left={() => (
+                                <List.Image
+                                    style={styles.itemImage}
+                                    variant="image"
+                                    source={item5}
+                                />
+                            )}
+                        />
+                        <List.Item
+                            style={styles.listSectionEachItem}
+                            title="x 1"
+                            titleStyle={styles.title}
+                            left={() => (
+                                <List.Image
+                                    style={styles.itemImage}
+                                    variant="image"
+                                    source={item6}
+                                />
+                            )}
+                        />
                     </List.Section>
                 </ImageBackground>
             </Modal>
@@ -85,7 +123,7 @@ function BagEnModal({ isOpen, onClose }) {
 
 const styles = StyleSheet.create({
     containerStyle: {
-        backgroundColor: "blue",
+        shadowColor: "transparent",
         padding: 0,
         flex: 1,
         flexDirection: "row",
@@ -95,63 +133,65 @@ const styles = StyleSheet.create({
         marginBottom: 40,
         marginLeft: 20,
         marginRight: 20,
-        borderRadius: 15,
+        borderRadius: 25,
         overflow: "hidden",
     },
     imageBackground: {
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
-        // width: "100%",
-        // height: "100%",
+        width: "100%",
         borderColor: "#77814A",
         borderWidth: 10,
         borderRadius: 25,
         overflow: "hidden",
         marginLeft: 15,
-        marginRight: 15,
-        marginTop: 15,
+        marginRight: 20,
+        marginTop: 20,
         marginBottom: 10,
     },
-    listSection: {
-        flex: 1,
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignContent: "center",
-        width: "100%",
-        // borderColor: "#501600",
-        // borderWidth: 10,
-        borderRadius: 15,
-        overflow: "hidden",
-    },
-    header: {
+    text: {
         alignSelf: "center",
-        color: "black",
+        color: "#000000",
         fontSize: 25,
         lineHeight: 25,
         fontFamily: "almendra_bold",
         textAlign: "center",
         textAlignVertical: "center",
         includeFontPadding: false,
-        // backgroundColor: "#AE6F4C",
+        // backgroundColor: "#FFFD55",
         marginTop: "2%",
-        // borderWidth: 1,
-        // borderColor: "black",
     },
-    listView: {
+    listSectionAllItems: {
+        // backgroundColor: "#EB3324",
+        flexDirection: "row",
         flex: 1,
         flexWrap: "wrap",
-        flexDirection: "row",
         justifyContent: "center",
         alignContent: "center",
         width: "100%",
     },
+    listSectionEachItem: {
+        // backgroundColor: "#FF7F27",
+        flexBasis: "25%",
+        paddingLeft: "2%",
+        paddingRight: "2%",
+        borderColor: "#77814A",
+        borderWidth: 5,
+        borderRadius: 25,
+        overflow: "hidden",
+        margin: "1%",
+    },
+    title: {
+        color: "#000000",
+        fontSize: 25,
+        // backgroundColor: "#377D22",
+        textAlign: "center",
+    },
     itemImage: {
-        resizeMode: "center",
-        flexBasis: 165,
-        tintColor: "black",
-        opacity: 0.6,
-        margin: "2%",
+        // backgroundColor: "#0023F5",
+        resizeMode: "contain",
+        tintColor: "#000000",
     },
     button: {
         flex: 1,
@@ -160,9 +200,9 @@ const styles = StyleSheet.create({
         position: "absolute",
         mode: "contained",
         backgroundColor: "#77814A",
-        right: "-4%",
-        top: "-10%",
-        overflow: "visible",
+        right: "-0.5%",
+        top: "-1.5%",
+        overflow: "hidden",
     },
 });
 
