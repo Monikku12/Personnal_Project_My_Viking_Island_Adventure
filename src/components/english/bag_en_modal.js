@@ -41,9 +41,9 @@ function BagEnModal({ isOpen, onClose }) {
                     style={styles.imageBackground}
                 >
                     <Text style={styles.text}>My Items</Text>
-                    <List.Section style={styles.listSectionAllItems}>
+                    <List.Section style={styles.listSection}>
                         <List.Item
-                            style={styles.listSectionEachItem}
+                            style={styles.questItem}
                             title="x 1"
                             titleStyle={styles.title}
                             left={() => (
@@ -55,7 +55,7 @@ function BagEnModal({ isOpen, onClose }) {
                             )}
                         />
                         <List.Item
-                            style={styles.listSectionEachItem}
+                            style={styles.questItem}
                             title="x 1"
                             titleStyle={styles.title}
                             left={() => (
@@ -67,7 +67,7 @@ function BagEnModal({ isOpen, onClose }) {
                             )}
                         />
                         <List.Item
-                            style={styles.listSectionEachItem}
+                            style={styles.questItem}
                             title="x 1"
                             titleStyle={styles.title}
                             left={() => (
@@ -79,7 +79,7 @@ function BagEnModal({ isOpen, onClose }) {
                             )}
                         />
                         <List.Item
-                            style={styles.listSectionEachItem}
+                            style={styles.questItem}
                             title="x 1"
                             titleStyle={styles.title}
                             left={() => (
@@ -91,7 +91,7 @@ function BagEnModal({ isOpen, onClose }) {
                             )}
                         />
                         <List.Item
-                            style={styles.listSectionEachItem}
+                            style={styles.questItem}
                             title="x 1"
                             titleStyle={styles.title}
                             left={() => (
@@ -103,7 +103,7 @@ function BagEnModal({ isOpen, onClose }) {
                             )}
                         />
                         <List.Item
-                            style={styles.listSectionEachItem}
+                            style={styles.questItem}
                             title="x 1"
                             titleStyle={styles.title}
                             left={() => (
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         // backgroundColor: "#FFFD55",
         marginTop: "2%",
     },
-    listSectionAllItems: {
+    listSection: {
         // backgroundColor: "#EB3324",
         flexDirection: "row",
         flex: 1,
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
         alignContent: "center",
         width: "100%",
     },
-    listSectionEachItem: {
+    questItem: {
         // backgroundColor: "#FF7F27",
         flexBasis: "25%",
         paddingLeft: "2%",
