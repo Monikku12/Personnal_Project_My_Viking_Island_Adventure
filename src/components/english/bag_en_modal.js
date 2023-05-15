@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, StyleSheet, ImageBackground, Dimensions } from "react-native";
+import { StyleSheet, ImageBackground } from "react-native";
 import { Modal, Portal, IconButton, List, Text } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/bag_background.jpg");

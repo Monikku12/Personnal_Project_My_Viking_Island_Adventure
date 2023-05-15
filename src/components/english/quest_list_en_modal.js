@@ -6,6 +6,7 @@ import {
     IconButton,
     List,
     Avatar,
+    Text
 } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/quest_list_background.png");
@@ -25,23 +26,21 @@ function QuestListEnModal({ isOpen, onClose }) {
                 onDismiss={onClose}
                 contentContainerStyle={styles.containerStyle}
             >
+                <IconButton
+                    style={styles.button}
+                    containerColor="transparent"
+                    iconColor="black"
+                    animated="true"
+                    icon="close"
+                    onPress={onClose}
+                />
                 <ImageBackground
                     source={backgroundImage}
                     style={styles.imageBackground}
                 >
-                    <IconButton
-                        style={styles.button}
-                        containerColor="transparent"
-                        iconColor="black"
-                        animated="true"
-                        icon="close"
-                        onPress={onClose}
-                    />
+                    <Text style={styles.text}>My Quests</Text>
                     <List.Section style={styles.listSection}>
-                        <List.Subheader style={styles.subheader}>
-                            My Quests
-                        </List.Subheader>
-                        <View style={styles.listView}>
+                        {/* <View style={styles.listView}> */}
                             <List.Item
                                 style={styles.questItem}
                                 title="3 eggs"
@@ -110,7 +109,7 @@ function QuestListEnModal({ isOpen, onClose }) {
                                     />
                                 )}
                             />
-                        </View>
+                        {/* </View> */}
                     </List.Section>
                 </ImageBackground>
             </Modal>
@@ -130,15 +129,37 @@ const styles = StyleSheet.create({
         marginBottom: 40,
         marginLeft: 20,
         marginRight: 20,
-        borderRadius: 10,
+        // borderRadius: 10,
     },
     imageBackground: {
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
         width: "100%",
-        height: "100%",
+        // height: "100%",
+        borderColor: "#77814A",
+        borderWidth: 10,
+        borderRadius: 25,
+        overflow: "hidden",
+        marginLeft: 15,
+        marginRight: 20,
+        marginTop: 20,
+        marginBottom: 10,
     },
+    text: {
+        alignSelf: "center",
+        color: "#000000",
+        fontSize: 25,
+        lineHeight: 25,
+        fontFamily: "almendra_bold",
+        textAlign: "center",
+        textAlignVertical: "center",
+        includeFontPadding: false,
+        // backgroundColor: "#FFFD55",
+        marginTop: "2%",
+    },
+    // ************* ok ***********
+
     listSection: {
         flex: 1,
         flexWrap: "wrap",
@@ -146,26 +167,14 @@ const styles = StyleSheet.create({
         alignContent: "center",
         width: "100%",
     },
-    subheader: {
-        alignSelf: "center",
-        color: "black",
-        fontSize: 22,
-        lineHeight: 15,
-        fontFamily: "almendra_bold",
-        textAlign: "center",
-        textAlignVertical: "bottom",
-        includeFontPadding: false,
-        textDecorationLine: "underline",
-        marginTop: 15,
-    },
-    listView: {
-        flex: 1,
-        flexWrap: "wrap",
-        width: "90%",
-        justifyContent: "flex-start",
-        alignContent: "stretch",
-        marginTop: -20,
-    },
+    // listView: {
+    //     flex: 1,
+    //     flexWrap: "wrap",
+    //     width: "90%",
+    //     justifyContent: "flex-start",
+    //     alignContent: "stretch",
+    //     marginTop: -20,
+    // },
     questItem: {
         justifyContent: "center",
         alignContent: "flex-start",
@@ -195,14 +204,19 @@ const styles = StyleSheet.create({
     questItemIconDone: {
         opacity: 0.5,
     },
+
+    // ******** OK **********
     button: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
-        mode: "text",
-        right: "2%",
-        top: "3%",
+        // mode: "text",
+        mode: "contained",
+        backgroundColor: "#77814A",
+        right: "-0.5%",
+        top: "-1.5%",
+        overflow: "hidden",
     },
 });
 
