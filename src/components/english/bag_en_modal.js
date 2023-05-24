@@ -4,7 +4,6 @@ import { Modal, Portal, IconButton, List, Text } from "react-native-paper";
 
 const backgroundImage = require("../../images/background/bag_background.jpg");
 
-
 const item1 = require("../../images/items/egg.png");
 const item2 = require("../../images/items/mint.png");
 const item3 = require("../../images/items/potion.png");

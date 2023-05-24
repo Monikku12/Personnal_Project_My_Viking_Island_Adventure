@@ -1,12 +1,6 @@
 import * as React from "react";
 import { StyleSheet, ImageBackground } from "react-native";
-import {
-    Modal,
-    Portal,
-    IconButton,
-    List,
-    Text
-} from "react-native-paper";
+import {Modal, Portal, IconButton, List, Text} from "react-native-paper";
 
 const backgroundImage = require("../../images/background/quest_list_background.png");
 

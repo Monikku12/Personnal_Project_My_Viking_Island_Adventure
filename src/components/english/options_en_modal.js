@@ -1,10 +1,6 @@
 import * as React from "react";
-import { View, StyleSheet, ImageBackground } from "react-native";
-import {
-    Modal,
-    Portal,
-    IconButton,
-    List,
+import { Text, StyleSheet, ImageBackground } from "react-native";
+import {Modal, Portal, IconButton, List,
     // Switch,
     SegmentedButtons,
 } from "react-native-paper";
@@ -22,23 +18,20 @@ function OptionEnModal ({ isOpen, onClose }) {
                 onDismiss={onClose}
                 contentContainerStyle={styles.containerStyle}
             >
+                <IconButton
+                    style={styles.button}
+                    containerColor="transparent"
+                    iconColor="black"
+                    animated="true"
+                    icon="close"
+                    onPress={onClose}
+                />
                 <ImageBackground
                     source={backgroundImage}
                     style={styles.imageBackground}
                 >
-                    <IconButton
-                        style={styles.button}
-                        containerColor="transparent"
-                        iconColor="black"
-                        animated="true"
-                        icon="close"
-                        onPress={onClose}
-                    />
+                    <Text style={styles.text}>Options</Text>
                     <List.Section style={styles.listSection}>
-                        <List.Subheader style={styles.subheader}>
-                            Options
-                        </List.Subheader>
-                        <View style={styles.listView}>
                             <List.Item
                                 style={styles.questItem}
                                 title="Music"
@@ -104,7 +97,6 @@ function OptionEnModal ({ isOpen, onClose }) {
                                 }
                                 descriptionStyle={styles.questItemDescription}
                             />
-                        </View>
                     </List.Section>
                 </ImageBackground>
             </Modal>
