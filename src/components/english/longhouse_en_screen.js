@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
         height: "50%",
         left: "1%",
         bottom: "-15%",
-        backgroundColor: "pink",
-        opacity: 0.5,
+        // backgroundColor: "pink",
+        // opacity: 0.5,
     },
 });
 
